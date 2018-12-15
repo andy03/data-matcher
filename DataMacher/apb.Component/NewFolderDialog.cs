@@ -158,13 +158,10 @@ namespace DataMacher
         public string createNewFolder(Folder folder)
         {
             //comboSource = new DataTable();
-            InitDialog();
-            
+            InitDialog();           
 
-            Instanta instanta = new Instanta("SAAS");
-            //instanta.IdInstanta = 2;
-
-            InstantaService.GetInstantaService.Add(instanta);
+            var instanta = InstantaService.GetInstantaService.GetById(2);
+            var stare = StareService.GetStareService.GetById(1);
 
 
             Button confirmation = new Button() { Text = "STESTSETS", Left = 350, Width = 100, Top = 70 };

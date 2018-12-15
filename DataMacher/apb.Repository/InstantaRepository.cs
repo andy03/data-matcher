@@ -62,11 +62,11 @@ namespace DataMacher.apb.Repository
         public void Update(Instanta instanta)
         {
             using (ISession session = NHibernateHelper.OpenSession())
-            using (ITransaction transaction = session.BeginTransaction())
-            {
-                session.Update(instanta);
-                transaction.Commit();
-            }
+                using (ITransaction transaction = session.BeginTransaction())
+                {
+                    session.Update(instanta);
+                    transaction.Commit();
+                }
         }
     }
 }

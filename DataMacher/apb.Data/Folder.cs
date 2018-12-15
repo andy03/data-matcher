@@ -48,7 +48,7 @@ namespace DataMacher.apb.Data
 
         public static implicit operator Folder(ListViewSubItemCollection v)
         {
-            Stare Stare = new Stare(REDACTATA, new DateTime(), "adresa", "tip", "numbeAvt", new Instanta("numeInstanta"), "numbeJudecatorie", new DateTime());
+            Stare Stare = new Stare(REDACTATA, new DateTime(), "adresa", "numbeAvt", new Instanta("numeInstanta"), "numbeJudecatorie", new DateTime());
             Situatie Situatie = new Situatie("nume situatie", 12, "descriere");
             Act Act = new Act(Stare, Situatie,"tipAct", new DateTime());
 

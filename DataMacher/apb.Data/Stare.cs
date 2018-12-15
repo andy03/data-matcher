@@ -5,37 +5,36 @@ namespace DataMacher.apb.Data
 {
     public class Stare
     {
-        public int IdStare { get; set; }
-        public string Intrebare { get; set; }
-        public DateTime Data { get; set; }
-        public string Adresa { get; set; }
-        public string Tip { get; set; }
-        public string NumeAvct { get; set; }
-        public Instanta Instanta { get; set; }
-        public string NumeJudecatorie { get; set; }
-        public DateTime DataFotocopiat { get; set; }
+        public virtual int Id_stare { get; set; }
+        public virtual string Nume_intrebare { get; set; }
+        public virtual DateTime Data_intrebare { get; set; }
+        public virtual string Adresa { get; set; }
+        public virtual string Nume_avct { get; set; }
+        public virtual Instanta Instanta { get; set; }
+        public virtual string Nume_jdctr { get; set; }
+        public virtual DateTime Data_fotocopiat { get; set; }
 
-        public Stare(IntrebareEnumUtils intrebare, DateTime data, string adresa, string tip, string numeAvct, Instanta instanta, string numeJudecatorie, DateTime dataFotocopiat)
+        public Stare(IntrebareEnumUtils nume_intrebare, DateTime data_intrebare, string adresa, string numeAvct, Instanta instanta, string nume_jdctr, DateTime data_Fotocopiat)
         {
-            this.Intrebare = intrebare.ToString();
-            this.Data = data;
+            this.Nume_intrebare = nume_intrebare.ToString();
+            this.Data_intrebare = data_intrebare;
             this.Adresa = adresa;
-            this.Tip = tip;
-            this.NumeAvct = numeAvct;
+            this.Nume_avct = numeAvct;
             this.Instanta = instanta;
-            this.NumeJudecatorie = numeJudecatorie;
-            this.DataFotocopiat = dataFotocopiat;
+            this.Nume_jdctr = nume_jdctr;
+            this.Data_fotocopiat = data_Fotocopiat;
         }
 
-        public Stare(IntrebareEnumUtils intrebare, DateTime data, string adresa, string tip, string numeAvct, Instanta instanta, string numeJudecatorie)
+        public Stare(IntrebareEnumUtils nume_intrebare, DateTime data_intrebare, string adresa, string numeAvct, Instanta instanta, string nume_jdctr)
         {
-            this.Intrebare = intrebare.ToString();
-            this.Data = data;
+            this.Nume_intrebare = nume_intrebare.ToString();
+            this.Data_intrebare = data_intrebare;
             this.Adresa = adresa;
-            this.Tip = tip;
-            this.NumeAvct = numeAvct;
+            this.Nume_avct = numeAvct;
             this.Instanta = instanta;
-            this.NumeJudecatorie = numeJudecatorie;
+            this.Nume_jdctr = nume_jdctr;
         }
+
+        public Stare() { }
     }
 }

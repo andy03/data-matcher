@@ -1,17 +1,18 @@
-﻿using DataMacher.apb.Data;
+﻿
+using DataMacher.apb.Data;
 using FluentNHibernate.Mapping;
 
 namespace DataMacher.apb.Maps
 {
-    class InstantaMap : ClassMap<Instanta>
+    class ActMap : ClassMap<Act>
     {
-        public InstantaMap()
+        public ActMap()
         {
             //Table used to store data
-            Table("instanta");
+            Table("act");
 
             // The primary key
-            Id(x => x.Id_instanta)
+            Id(x => x.Id_act)
             .Not.Nullable()
             .GeneratedBy.Assigned()
             .Unique();
@@ -19,8 +20,17 @@ namespace DataMacher.apb.Maps
             // Our simple field, FluentNHibernate knows
             // how they go together because the field and
             // column are named the same.
-            Map(x => x.Nume_instanta)
+            Map(x => x.Tip_act)
             .Not.Nullable();
+            Map(x => x.Data)
+            .Not.Nullable();
+
+            References(x => x.Stare, "id_stare")
+            .Not.Nullable();
+
+            //References(x => x.Situatie, "id_situatie")
+            //.Not.Nullable();
+
         }
     }
 }
