@@ -1,10 +1,6 @@
 ﻿using DataMacher.apb.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataMacher.apb.Service;
 
 namespace DataMacher
 {
@@ -12,6 +8,7 @@ namespace DataMacher
     {
         private static readonly NewFolderDialog INSTANCE = new NewFolderDialog();
         private static Form prompt;
+       
 
         private NewFolderDialog() { }
 
@@ -162,11 +159,14 @@ namespace DataMacher
         {
             //comboSource = new DataTable();
             InitDialog();
-        
+            
+
+            Instanta instanta = new Instanta("SAAS");
+            //instanta.IdInstanta = 2;
+
+            InstantaService.GetInstantaService.Add(instanta);
 
 
-
-   
             Button confirmation = new Button() { Text = "STESTSETS", Left = 350, Width = 100, Top = 70 };
             confirmation.Click += (sender, e) => { prompt.Close(); };
             prompt.Controls.Add(confirmation);

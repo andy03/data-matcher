@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace DataMacher.apb.Data
 {
     public class Situatie
@@ -13,11 +8,11 @@ namespace DataMacher.apb.Data
         public int ZileRamase { get; set; }
         public string Descriere { get; set; }
 
-        public Situatie(string NumeSituatie, int ZileRamase, string Descriere)
+        public Situatie(string numeSituatie, int zileRamase, string descriere)
         {
-            this.NumeSituatie = NumeSituatie;
-            this.ZileRamase = ZileRamase;
-            this.Descriere = Descriere;
+            this.NumeSituatie = numeSituatie;
+            this.ZileRamase = zileRamase;
+            this.Descriere = descriere;
         }
     }
 }

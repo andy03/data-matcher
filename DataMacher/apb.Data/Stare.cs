@@ -1,9 +1,5 @@
 ﻿using DataMacher.apb.Utils;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataMacher.apb.Data
 {
@@ -19,27 +15,27 @@ namespace DataMacher.apb.Data
         public string NumeJudecatorie { get; set; }
         public DateTime DataFotocopiat { get; set; }
 
-        public Stare(IntrebareEnumUtils Intrebare, DateTime Data, string Adresa, string Tip, string NumeAvct, Instanta Instanta, string NumeJudecatorie, DateTime DataFotocopiat)
+        public Stare(IntrebareEnumUtils intrebare, DateTime data, string adresa, string tip, string numeAvct, Instanta instanta, string numeJudecatorie, DateTime dataFotocopiat)
         {
-            this.Intrebare = Intrebare.ToString();
-            this.Data = Data;
-            this.Adresa = Adresa;
-            this.Tip = Tip;
-            this.NumeAvct = NumeAvct;
-            this.Instanta = Instanta;
-            this.NumeJudecatorie = NumeJudecatorie;
-            this.DataFotocopiat = DataFotocopiat;
+            this.Intrebare = intrebare.ToString();
+            this.Data = data;
+            this.Adresa = adresa;
+            this.Tip = tip;
+            this.NumeAvct = numeAvct;
+            this.Instanta = instanta;
+            this.NumeJudecatorie = numeJudecatorie;
+            this.DataFotocopiat = dataFotocopiat;
         }
 
-        public Stare(IntrebareEnumUtils Intrebare, DateTime Data, string Adresa, string Tip, string NumeAvct, Instanta Instanta, string NumeJudecatorie)
+        public Stare(IntrebareEnumUtils intrebare, DateTime data, string adresa, string tip, string numeAvct, Instanta instanta, string numeJudecatorie)
         {
-            this.Intrebare = Intrebare.ToString();
-            this.Data = Data;
-            this.Adresa = Adresa;
-            this.Tip = Tip;
-            this.NumeAvct = NumeAvct;
-            this.Instanta = Instanta;
-            this.NumeJudecatorie = NumeJudecatorie;
+            this.Intrebare = intrebare.ToString();
+            this.Data = data;
+            this.Adresa = adresa;
+            this.Tip = tip;
+            this.NumeAvct = numeAvct;
+            this.Instanta = instanta;
+            this.NumeJudecatorie = numeJudecatorie;
         }
     }
 }

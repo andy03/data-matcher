@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataMacher.apb.Data
 {
@@ -14,12 +10,12 @@ namespace DataMacher.apb.Data
         public string TipAct { get; set; }
         public DateTime Data { get; set; }
         
-        public Act(Stare Stare, Situatie Situatie, string TipAct, DateTime Data)
+        public Act(Stare stare, Situatie situatie, string tipAct, DateTime data)
         {
-            this.Stare = Stare;
-            this.Situatie = Situatie;
-            this.TipAct = TipAct;
-            this.Data = Data;
+            this.Stare = stare;
+            this.Situatie = situatie;
+            this.TipAct = tipAct;
+            this.Data = data;
         }
     }
 }

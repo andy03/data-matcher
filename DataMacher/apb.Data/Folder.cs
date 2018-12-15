@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using static System.Windows.Forms.ListViewItem;
 using static DataMacher.apb.Utils.IntrebareEnumUtils;
 
@@ -22,29 +17,29 @@ namespace DataMacher.apb.Data
         public string NumeTitular { get; set; }
         public Act Act { get; set; }
 
-        public Folder(Instanta Instanta, string CodValueA, string CodValueB, string CodValueC, string CodValueD, string NumeClient, string NumeTitular, Act Act)
+        public Folder(Instanta instanta, string codValueA, string codValueB, string codValueC, string codValueD, string numeClient, string numeTitular, Act act)
         {
-            this.Instanta = Instanta;
-            this.CodValueA = CodValue;
-            this.CodValueB = CodValueB;
-            this.CodValueC = CodValueC;
-            this.CodValueD = CodValueD;
-            this.CodValue = CodValueA + '/' + CodValueB + '/' + CodValueC + '/' + CodValueD;
-            this.NumeClient = NumeClient;
-            this.NumeTitular = NumeTitular;
-            this.Act = Act;
+            this.Instanta = instanta;
+            this.CodValueA = codValueA;
+            this.CodValueB = codValueB;
+            this.CodValueC = codValueC;
+            this.CodValueD = codValueD;
+            this.CodValue = codValueA + '/' + codValueB + '/' + codValueC + '/' + codValueD;
+            this.NumeClient = numeClient;
+            this.NumeTitular = numeTitular;
+            this.Act = act;
         }
 
-        public Folder(Instanta Instanta, string CodValueA, string CodValueB, string CodValueC,  string NumeClient, string NumeTitular, Act Act)
+        public Folder(Instanta instanta, string codValueA, string codValueB, string codValueC, string numeClient, string numeTitular, Act act)
         {
-            this.Instanta = Instanta;
-            this.CodValueA = CodValueA;
-            this.CodValueB = CodValueB;
-            this.CodValueC = CodValueC;
-            this.CodValue = CodValueA + '/' + CodValueB + '/' + CodValueC;
-            this.NumeClient = NumeClient;
-            this.NumeTitular = NumeTitular;
-            this.Act = Act;
+            this.Instanta = instanta;
+            this.CodValueA = codValueA;
+            this.CodValueB = codValueB;
+            this.CodValueC = codValueC;
+            this.CodValue = codValueA + '/' + codValueB + '/' + codValueC;
+            this.NumeClient = numeClient;
+            this.NumeTitular = numeTitular;
+            this.Act = act;
         }
 
         public Folder()

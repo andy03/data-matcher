@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace DataMacher.apb.Data
 {
     public class Instanta
     {
-        public int IdInstanta { get; set; }
-        public string NumeInstanta { get; set; }
+        public virtual int Id_instanta { get; set; }
+        public virtual string Nume_instanta { get; set; }
 
-        public Instanta(string NumeInstanta)
+        public Instanta(string nume_instanta)
         {
-            this.NumeInstanta = NumeInstanta;
+            this.Nume_instanta = nume_instanta;
         }
+
+        public Instanta() { }
     }
 }
