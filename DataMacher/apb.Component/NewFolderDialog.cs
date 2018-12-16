@@ -162,6 +162,8 @@ namespace DataMacher
 
             var instanta = InstantaService.GetInstantaService.GetById(2);
             var stare = StareService.GetStareService.GetById(1);
+            var instanta2 = stare.Instanta.Nume_instanta;
+
 
 
             Button confirmation = new Button() { Text = "STESTSETS", Left = 350, Width = 100, Top = 70 };

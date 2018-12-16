@@ -3,15 +3,15 @@ using FluentNHibernate.Mapping;
 
 namespace DataMacher.apb.Maps
 {
-    class StareMap : ClassMap<Stare>
+    class FolderMap : ClassMap<Folder>
     {
-        public StareMap()
+        public FolderMap()
         {
             //Table used to store data
-            Table("stare");
+            Table("dosar");
 
             // The primary key
-            Id(x => x.Id_stare)
+            Id(x => x.Id_dosar)
             .Not.Nullable()
             .GeneratedBy.Assigned()
             .Unique();
@@ -19,26 +19,31 @@ namespace DataMacher.apb.Maps
             // Our simple field, FluentNHibernate knows
             // how they go together because the field and
             // column are named the same.
+            Map(x => x.Cod_value_a)
+            .Not.Nullable();
+
+            Map(x => x.Cod_value_b)
+            .Not.Nullable();
+
+             Map(x => x.Cod_value_c)
+            .Not.Nullable();
+
+            Map(x => x.Cod_value_d)
+            .Not.Nullable();
+
+            Map(x => x.Cod_value)
+            .Not.Nullable();
+
+            Map(x => x.Nume_titular)
+            .Not.Nullable();
+
+            Map(x => x.Nume_client)
+            .Not.Nullable();
+
             References(x => x.Instanta, "id_instanta")
-            .Not.LazyLoad()
             .Not.Nullable();
 
-            Map(x => x.Nume_intrebare)
-            .Not.Nullable();
-
-            Map(x => x.Data_intrebare)
-            .Not.Nullable();
-
-            Map(x => x.Adresa)
-            .Not.Nullable();
-
-            Map(x => x.Nume_avct)
-            .Not.Nullable();
-
-            Map(x => x.Data_fotocopiat)
-            .Not.Nullable();
-
-            Map(x => x.Nume_jdctr)
+            References(x => x.Act, "id_act")
             .Not.Nullable();
 
         }

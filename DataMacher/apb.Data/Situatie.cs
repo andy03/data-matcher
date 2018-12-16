@@ -3,16 +3,18 @@ namespace DataMacher.apb.Data
 {
     public class Situatie
     {
-        public int IdSituatie { get; set; }
-        public string NumeSituatie { get; set; }
-        public int ZileRamase { get; set; }
-        public string Descriere { get; set; }
+        public virtual int Id_situatie { get; set; }
+        public virtual string Nume_situatie { get; set; }
+        public virtual int Nr_zile_ramase { get; set; }
+        public virtual string Descriere { get; set; }
 
         public Situatie(string numeSituatie, int zileRamase, string descriere)
         {
-            this.NumeSituatie = numeSituatie;
-            this.ZileRamase = zileRamase;
+            this.Nume_situatie = numeSituatie;
+            this.Nr_zile_ramase = zileRamase;
             this.Descriere = descriere;
         }
+
+        public Situatie() { }
     }
 }

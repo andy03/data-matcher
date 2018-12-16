@@ -29,7 +29,8 @@ namespace DataMacher.apb.Utils
 
                 .Mappings(m => m.FluentMappings.AddFromAssemblyOf<InstantaMap>())
                 .Mappings(m => m.FluentMappings.AddFromAssemblyOf<StareMap>())
-
+                .Mappings(m => m.FluentMappings.AddFromAssemblyOf<ActMap>())
+                .Mappings(m => m.FluentMappings.AddFromAssemblyOf<SituatieMap>())
 
 
                 .BuildSessionFactory();

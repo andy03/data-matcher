@@ -28,8 +28,8 @@ namespace DataMacher.apb.Maps
             References(x => x.Stare, "id_stare")
             .Not.Nullable();
 
-            //References(x => x.Situatie, "id_situatie")
-            //.Not.Nullable();
+            References(x => x.Situatie, "id_situatie")
+            .Not.Nullable();
 
         }
     }

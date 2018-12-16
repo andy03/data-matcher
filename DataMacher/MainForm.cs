@@ -30,9 +30,9 @@ namespace DataMacher
             Folder Folder = new Folder(new Instanta("22"), "adresa", "adresa", "adresa", "adresa", "adresa", "adresa", Act);
 
 
-            string[] f1 = { Folder.NumeClient, Folder.NumeClient, Folder.NumeClient };
-            string[] f2 = { Folder.NumeClient, Folder.NumeClient, Folder.NumeClient };
-            string[] f3 = { Folder.NumeClient, Folder.NumeClient, Folder.NumeClient };
+            string[] f1 = { Folder.Nume_client, Folder.Nume_client, Folder.Nume_client };
+            string[] f2 = { Folder.Nume_client, Folder.Nume_client, Folder.Nume_client };
+            string[] f3 = { Folder.Nume_client, Folder.Nume_client, Folder.Nume_client };
 
             var listViewItem1 = new ListViewItem(f1);
             var listViewItem2 = new ListViewItem(f2);

@@ -23,6 +23,7 @@ namespace DataMacher.apb.Repository
                 return _stareRepository;
             }
         }
+
         public void Add(Stare stare)
         {
             using (ISession session = NHibernateHelper.OpenSession())
