@@ -1,6 +1,7 @@
 ﻿using DataMacher.apb.Data;
 using DataMacher.apb.Utils;
 using NHibernate;
+using System.Collections.Generic;
 
 namespace DataMacher.apb.Repository
 {
@@ -67,6 +68,17 @@ namespace DataMacher.apb.Repository
                     session.Update(instanta);
                     transaction.Commit();
                 }
+        }
+
+        public List<string> FindAllInstantaName()
+        {
+            using (ISession session = NHibernateHelper.OpenSession())
+            {
+                List<string> instantaList = (List<string>)session.QueryOver<Instanta>()
+                .SelectList(list => list
+                    .Select(x => x.Nume_instanta)).List<string>();
+                return instantaList;
+            }
         }
     }
 }
