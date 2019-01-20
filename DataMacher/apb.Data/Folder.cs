@@ -13,8 +13,8 @@ namespace DataMacher.apb.Data
         public virtual string Cod_value_c { get; set; }
         public virtual string Cod_value_d { get; set; }
         public virtual string Cod_value { get; set; }
-        public virtual string Nume_client { get; set; }
-        public virtual string Nume_titular { get; set; }
+        public virtual string Nume_cl { get; set; }
+        public virtual string Nume_tit_dosar { get; set; }
         public virtual Act Act { get; set; }
 
         public Folder(Instanta instanta, string cod_Value_A, string cod_Value_B, string cod_Value_C, string cod_Value_D, string nume_Client, string nume_Titular, Act act)
@@ -25,8 +25,8 @@ namespace DataMacher.apb.Data
             this.Cod_value_c = cod_Value_C;
             this.Cod_value_d = cod_Value_D;
             this.Cod_value = cod_Value_A + '/' + cod_Value_B + '/' + cod_Value_C + '/' + cod_Value_D;
-            this.Nume_client = nume_Client;
-            this.Nume_titular = nume_Titular;
+            this.Nume_cl = nume_Client;
+            this.Nume_tit_dosar = nume_Titular;
             this.Act = act;
         }
 
@@ -37,8 +37,8 @@ namespace DataMacher.apb.Data
             this.Cod_value_b = cod_Value_B;
             this.Cod_value_c = cod_Value_C;
             this.Cod_value = cod_Value_A + '/' + cod_Value_B + '/' + cod_Value_C;
-            this.Nume_client = nume_Client;
-            this.Nume_titular = nume_Titular;
+            this.Nume_cl = nume_Client;
+            this.Nume_tit_dosar = nume_Titular;
             this.Act = act;
         }
 

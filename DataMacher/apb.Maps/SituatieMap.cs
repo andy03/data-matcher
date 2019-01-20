@@ -15,7 +15,6 @@ namespace DataMacher.apb.Maps
                 // The primary key
                 Id(x => x.Id_situatie)
                 .Not.Nullable()
-                .GeneratedBy.Assigned()
                 .Unique();
 
                 // Our simple field, FluentNHibernate knows

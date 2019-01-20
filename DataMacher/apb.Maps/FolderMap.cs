@@ -13,7 +13,7 @@ namespace DataMacher.apb.Maps
             // The primary key
             Id(x => x.Id_dosar)
             .Not.Nullable()
-            .GeneratedBy.Assigned()
+            //.GeneratedBy.Assigned()
             .Unique();
 
             // Our simple field, FluentNHibernate knows
@@ -34,10 +34,10 @@ namespace DataMacher.apb.Maps
             Map(x => x.Cod_value)
             .Not.Nullable();
 
-            Map(x => x.Nume_titular)
+            Map(x => x.Nume_tit_dosar)
             .Not.Nullable();
 
-            Map(x => x.Nume_client)
+            Map(x => x.Nume_cl)
             .Not.Nullable();
 
             References(x => x.Instanta, "id_instanta")

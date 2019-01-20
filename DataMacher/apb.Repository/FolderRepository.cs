@@ -122,7 +122,7 @@ namespace DataMacher.apb.Repository
         {
             using (ISession session = NHibernateHelper.OpenSession())
             {
-                List<Folder> folder = (List<Folder>)session.QueryOver<Folder>().Where(x => x.Nume_titular == nume_titular).List();
+                List<Folder> folder = (List<Folder>)session.QueryOver<Folder>().Where(x => x.Nume_tit_dosar == nume_titular).List();
                 return folder;
             }
         }
@@ -131,7 +131,7 @@ namespace DataMacher.apb.Repository
         {
             using (ISession session = NHibernateHelper.OpenSession())
             {
-                List<Folder> folder = (List<Folder>)session.QueryOver<Folder>().Where(x => x.Nume_client == nume_client).List();
+                List<Folder> folder = (List<Folder>)session.QueryOver<Folder>().Where(x => x.Nume_cl == nume_client).List();
                 return folder;
             }
         }

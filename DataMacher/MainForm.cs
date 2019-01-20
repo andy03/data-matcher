@@ -30,9 +30,9 @@ namespace DataMacher
             Folder Folder = new Folder(new Instanta("22"), "adresa", "adresa", "adresa", "adresa", "adresa", "adresa", Act);
 
 
-            string[] f1 = { Folder.Nume_client, Folder.Nume_client, Folder.Nume_client };
-            string[] f2 = { Folder.Nume_client, Folder.Nume_client, Folder.Nume_client };
-            string[] f3 = { Folder.Nume_client, Folder.Nume_client, Folder.Nume_client };
+            string[] f1 = { Folder.Nume_cl, Folder.Nume_cl, Folder.Nume_cl };
+            string[] f2 = { Folder.Nume_cl, Folder.Nume_cl, Folder.Nume_cl };
+            string[] f3 = { Folder.Nume_cl, Folder.Nume_cl, Folder.Nume_cl };
 
             var listViewItem1 = new ListViewItem(f1);
             var listViewItem2 = new ListViewItem(f2);
@@ -51,17 +51,13 @@ namespace DataMacher
 
         private void newButton_Click(object sender, EventArgs e)
         {
-            Folder folder = new Folder();
-            if (NewFolderDialog.Instance.createNewFolder(folder).Equals("true"))
-            {
- 
-            }
+            NewFolderDialog.Instance.createNewFolder();
         }
 
         private void folderList_DoubleClick(object sender, EventArgs e)
         {
             Folder folder = folderList.SelectedItems[0].SubItems;
-            NewFolderDialog.Instance.createNewFolder(folder);
+            NewFolderDialog.Instance.createNewFolder();
            // MessageBox.Show(folderList.SelectedItems[0].SubItems[0].Text);
         }
 
